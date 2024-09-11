@@ -1,5 +1,6 @@
 import { useUser } from '@clerk/clerk-react';
 import { Navigate, Outlet } from 'react-router-dom';
+import Header from './components/custom/Header';
 
 
 function App() {
@@ -9,7 +10,10 @@ function App() {
     return <Navigate to={'/auth/sign-in'}/>
   }
   return (
-    <Outlet />
+    <>
+      <Header/>
+      <Outlet />
+    </>
   )
 }
 
